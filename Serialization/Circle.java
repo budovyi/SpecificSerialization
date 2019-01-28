@@ -1,4 +1,4 @@
-public class Circle extends AbstractFigures {
+public class Circle extends AbstractFigure {
 
     private String Color;
     private int size;

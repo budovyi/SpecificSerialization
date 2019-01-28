@@ -1,4 +1,4 @@
-public class Triangle extends AbstractFigures {
+public class Triangle extends AbstractFigure {
 
     private String Color;
     private int size;

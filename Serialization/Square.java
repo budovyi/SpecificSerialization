@@ -1,4 +1,4 @@
-public class Square extends AbstractFigures {
+public class Square extends AbstractFigure {
 
     private String Color;
     private int size;
