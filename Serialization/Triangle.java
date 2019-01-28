@@ -1,10 +1,10 @@
 public class Triangle extends AbstractFigure {
 
-    private String Color;
+    private String color;
     private int size;
 
     public Triangle(String color, int size) {
-        this.Color = color;
+        this.color = color;
         this.size = size;
     }
 

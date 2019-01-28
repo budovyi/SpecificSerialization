@@ -1,10 +1,10 @@
 import java.util.*;
 
-public class Immutable {
+public class ImmutableExample {
     private List<String> list;
 
     public static void main(String[] args) {
-       new Immutable().start();
+       new ImmutableExample().start();
     }
 
     private void start() {

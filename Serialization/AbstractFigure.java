@@ -1,6 +1,6 @@
 public abstract class AbstractFigure implements Figure {
 
-    private String Color;
+    private String color;
     private int size;
     private StringBuilder sb;
 
@@ -8,7 +8,7 @@ public abstract class AbstractFigure implements Figure {
     public abstract void fill(String color);
 
     public String getColor() {
-        return Color;
+        return color;
     }
 
     public int getSize() {
