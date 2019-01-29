@@ -7,22 +7,25 @@ import java.util.List;
 public class SerializeToJson {
     private static StringBuilder sb = new StringBuilder();
     private static int count = 0;
+    private static final String TAB = "\t";
+    private static final String NUW = "\n";
     private static String tabRepeat = String.join("", Collections.nCopies(count, "\t"));
     private static List<Group> childGroups = new ArrayList();
     private static List<Figure> list = new ArrayList();
 
-    public static void serialize(Group group) {
-        childGroups = group.getChildGroups();
-        list = group.getList();
-        toJson();
+    public static String serialize(Group group) {
+        toJson(group);
+        return sb.toString();
     }
 
-    private static void toJson() {
+    private static void toJson(Group group) {
+        childGroups = group.getChildGroups();
+        list = group.getList();
+        Class clazz;
+
         for (Figure figure : list) {
-            Class clazz = figure.getClass();
-            String tab = "\t";
-            String nuw = "\n";
-            String tabRepeat = String.join("", Collections.nCopies(count, tab));
+             clazz = figure.getClass();
+            String tabRepeat = String.join("", Collections.nCopies(count, TAB));
 
             sb.append(tabRepeat).append("{\n");
             sb.append(tabRepeat).append("\"").append(clazz.getName()).append("\" : ").append("{");
@@ -35,29 +38,27 @@ public class SerializeToJson {
                     e.printStackTrace();
                 }
 
-                //json build logic
-                sb.append(nuw + tab).append(tabRepeat).append("\"").append(f.getName()).append("\": ");
-                sb.append("\"").append(value).append("\",");
+                // json build logic
+                sb.append(NUW + TAB).append(tabRepeat)
+                .append("\"").append(f.getName()).append("\": ")
+                .append("\"").append(value).append("\",");
             }
 
             for (Method met : clazz.getDeclaredMethods()) {
-                sb.append(nuw + tab).append(tabRepeat).append("\"").append(met.getName()).append("\" : {");
-                sb.append(nuw + tab).append(tabRepeat).append("}\n");
+                sb.append(NUW + TAB).append(tabRepeat).append("\"")
+                .append(met.getName()).append("\" : {");
+                sb.append(NUW + TAB).append(tabRepeat).append("}\n");
             }
             sb.append(tabRepeat).append("}\n");
         }
-        if (false == childGroups.isEmpty()) {
+        if (!childGroups.isEmpty()) {
             count++;
             tabRepeat = String.join("", Collections.nCopies((count - 1), "\t"));
-            for (Group group : childGroups) {
-                serialize(group);
+            for (Group gr : childGroups) {
+                toJson(gr);
             }
             tabRepeat = String.join("", Collections.nCopies((count - 1), "\t"));
             count--;
         }
-    }
-
-    public static void print() {
-        System.out.println(sb.toString());
     }
 }

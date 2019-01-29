@@ -1,18 +1,14 @@
 public class Square extends AbstractFigure {
 
-    private String color;
-    private int size;
-
     public Square(String color, int size) {
-        this.color = color;
-        this.size = size;
+        super(color, size);
     }
 
     @Override
     public void draw() {
         System.out.println("imagine like we drawed a Square!");
-        System.out.println("Width is: " /*+  getSize()*/);
-        System.out.println("height is: " /*+ (getSize() * Math.sqrt(3)) / 2 */);
+        System.out.println("size is:     " +  getSize() + " x " + getSize());
+
     }
 
     @Override

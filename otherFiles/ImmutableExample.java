@@ -1,13 +1,16 @@
-import java.util.*;
+package other;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ImmutableExample {
     private List<String> list;
 
     public static void main(String[] args) {
-       new ImmutableExample().start();
+       new ImmutableExample().demo();
     }
 
-    private void start() {
+    private void demo() {
         list = new ArrayList();
         list.add("line 1");
         list.add("line 2");

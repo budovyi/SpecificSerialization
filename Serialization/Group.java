@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Group {
     private static StringBuilder sb = new StringBuilder();
@@ -7,7 +9,7 @@ public class Group {
     private List<Figure> list = new ArrayList();
     private List<Group> childGroups = new ArrayList();
 
-    public void addGroups(Group... groups) {
+    public void addAll(Group... groups) {
         for (Group g : groups) {
             childGroups.add(g);
         }

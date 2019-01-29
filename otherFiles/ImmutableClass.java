@@ -1,15 +1,17 @@
+package other;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public final class ImmutableClass {
     private final String name;
     private final int age;
-    private final List<String> listIn;
+    private final List<String> list;
 
     public ImmutableClass(String name, int age, List<String> list) {
         this.name = name;
         this.age = age;
-        this.listIn = list;
+        this.list = list;
     }
 
     public int getAge() {
@@ -21,6 +23,6 @@ public final class ImmutableClass {
     }
 
     public List<String> getList() {
-        return new ArrayList(listIn);
+        return new ArrayList(list);
     }
 }
