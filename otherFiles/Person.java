@@ -21,27 +21,33 @@ public final class Person {
         private int additionalPhone;
         private int officeNumber;
         private int luckyNumber;
+
         public Builder setId(int i) {
             id = i;
             return this;
         }
+
         public Builder setPhone(int i) {
             phone = i;
             return this;
         }
+
         public Builder setAdditionalPhone(int i) {
             additionalPhone = i;
             return this;
         }
+
         public Builder setOfficeNumber(int i) {
             officeNumber = i;
             return this;
         }
+
         public Builder setLuckyNumber(int i) {
             luckyNumber = i;
             return this;
         }
-        public Person build () {
+
+        public Person build() {
             return new Person(this);
         }
     }
@@ -49,15 +55,19 @@ public final class Person {
     public int getId() {
         return id;
     }
+
     public int getPhone() {
         return phone;
     }
+
     public int getAdditionalPhone() {
         return additionalPhone;
     }
+
     public int getLuckyNumber() {
         return luckyNumber;
     }
+
     public int getOfficeNumber() {
         return officeNumber;
     }

@@ -30,7 +30,8 @@ public class SerializeToXml {
             sb.append(NUW).append(tabRepeat).append("<").append(clazz.getName()).append(">");
             for (Field f : clazz.getDeclaredFields()) {
                 String fieldType = f.getAnnotatedType().getType().getTypeName()
-                .replaceFirst("java.lang.", "");                f.setAccessible(true);
+                .replaceFirst("java.lang.", "");
+                f.setAccessible(true);
                 String value = null;
                 try {
                     value = String.valueOf(f.get(figure));

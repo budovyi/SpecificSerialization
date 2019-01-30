@@ -7,7 +7,7 @@ public class Square extends AbstractFigure {
     @Override
     public void draw() {
         System.out.println("imagine like we drawed a Square!");
-        System.out.println("size is:     " +  getSize() + " x " + getSize());
+        System.out.println("size is:     " + getSize() + " x " + getSize());
 
     }
 

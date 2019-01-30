@@ -24,7 +24,7 @@ public class SerializeToJson {
         Class clazz;
 
         for (Figure figure : list) {
-             clazz = figure.getClass();
+            clazz = figure.getClass();
             String tabRepeat = String.join("", Collections.nCopies(count, TAB));
 
             sb.append(tabRepeat).append("{\n");

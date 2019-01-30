@@ -9,13 +9,14 @@ public abstract class AbstractFigure implements Figure {
     }
 
     public abstract void draw();
+
     public abstract void fill(String color);
 
     public String getColor() {
-        return  color;
+        return color;
     }
 
     public int getSize() {
-        return  size;
+        return size;
     }
 }

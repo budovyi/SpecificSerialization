@@ -7,8 +7,8 @@ public class Triangle extends AbstractFigure {
     @Override
     public void draw() {
         System.out.println("imagine like we drawed a Triangle! (equilateral triangle)");
-        System.out.println("Width is: " +  getSize());
-        System.out.println("height is: " + (getSize() * Math.sqrt(3)) / 2 );
+        System.out.println("Width is: " + getSize());
+        System.out.println("height is: " + (getSize() * Math.sqrt(3)) / 2);
     }
 
     @Override

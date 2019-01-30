@@ -7,8 +7,8 @@ public class Circle extends AbstractFigure {
     @Override
     public void draw() {
         System.out.println("imagine like we drawed a Circle!");
-        System.out.println("Width is: " +  getSize());
-        System.out.println("radius is: " + (getSize()  / 2));
+        System.out.println("Width is: " + getSize());
+        System.out.println("radius is: " + (getSize() / 2));
     }
 
     @Override

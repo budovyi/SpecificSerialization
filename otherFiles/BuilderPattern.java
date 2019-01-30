@@ -12,7 +12,7 @@ public class BuilderPattern {
 
         System.out.println("id : " + person.getId() + " " + "phone : "
                 + person.getPhone() + " " + "someNumbers from 1 to 3: "
-                + person.getAdditionalPhone() +  " " +  person.getOfficeNumber() + " "
+                + person.getAdditionalPhone() + " " + person.getOfficeNumber() + " "
                 + person.getLuckyNumber());
         System.out.println();
     }
