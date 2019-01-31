@@ -1,20 +1,9 @@
-import java.util.*;
+package other;
 
-public class Immutable {
-    public static void main(String[] args) {
-        List<String> list = new ArrayList();
-        list.add("line 1");
-        list.add("line 2");
+import java.util.ArrayList;
+import java.util.List;
 
-        ImmutableClass ic = new ImmutableClass("Vaska", 5, list);
-
-        for (String s : ic.getList()) {
-            System.out.println(s);
-        }
-    }
-}
-
-final class ImmutableClass {
+public final class ImmutableClass {
     private final String name;
     private final int age;
     private final List<String> list;

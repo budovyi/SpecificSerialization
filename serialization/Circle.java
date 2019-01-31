@@ -1,18 +1,14 @@
-public class Circle extends AbstractFigures {
-
-    private String Color;
-    private int size;
+public class Circle extends AbstractFigure {
 
     public Circle(String color, int size) {
-        this.Color = color;
-        this.size = size;
+        super(color, size);
     }
 
     @Override
     public void draw() {
         System.out.println("imagine like we drawed a Circle!");
-        System.out.println("Width is: " /*+  getSize()*/);
-        System.out.println("height is: " /*+ (getSize() * Math.sqrt(3)) / 2 */);
+        System.out.println("Width is: " + getSize());
+        System.out.println("radius is: " + (getSize() / 2));
     }
 
     @Override
